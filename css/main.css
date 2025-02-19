@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+:root {
+	--Color-Black: #000000;
+	--Color-DarkPurple: #5c2dd5;
+	--Color-Purple: #7945ff;
+	--Color-Red: #fd6687;
+	--Color-Yellow: #ffce67;
+	--Color-White: #ffffff;
+
+	--Heading-family: "Space Grotesk", serif, bold;
+	--P-family: "Space Grotesk", serif, Medium;
+
+	--heading-weight: 700;
+	--P-weight: 500;
+	--Heading-L-size: 56px;
+	--Heading-M-size: 24px;
+	--Heading-S-size: 20px;
+	--Heading-XS-size: 16px;
+
+	--Heading-L-height: 71px;
+	--Heading-M-height: 31px;
+	--Heading-S-height: 26px;
+	--Heading-XS-height: 21px;
+
+	--purple-button-border: none;
+	--purple-button-radius: 34px;
+	--purple-button-padding: 0.8rem;
+}
+
+.heading-l {
+	font-size: var(--Heading-L-height);
+	line-height: var(--Heading-L-height);
+	font-weight: var(--heading-weight);
+	font-family: var(--Heading-family);
+	text-align: center;
+}
+
+.heading-s {
+	font-size: var(--Heading-S-height);
+	line-height: var(--Heading-S-height);
+	font-weight: var(--heading-weight);
+	font-family: var(--Heading-family);
+	text-align: center;
+}
+
+.heading-xs {
+	font-size: var(--Heading-XS-height);
+	line-height: var(--Heading-XS-height);
+	font-weight: var(--heading-weight);
+	font-family: var(--Heading-family);
+	text-align: center;
+}
+
+.heading-m {
+	font-size: var(--Heading-M-height);
+	line-height: var(--Heading-M-height);
+	font-weight: var(--heading-weight);
+	font-family: var(--Heading-family);
+	text-align: center;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--Color-Purple);
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.purple-btn {
+	width: 7%;
+	height: 70%;
+	padding: var(--purple-button-padding);
+	border: var(--purple-button-border);
+	border-radius: var(--purple-button-radius);
+	background-color: var(--Color-DarkPurple);
+
+	/*text*/
+	font-family: var(--Heading-family);
+	font-weight: var(--heading-weight);
+	font-size: var(--Heading-XS-size);
+	line-height: var(--Heading-XS-height);
+	text-align: center;
+	color: var(--Color-White);
+}
+
+.player-score-section {
+	display: flex;
+	flex-direction: row;
+	height: 60vh;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.player-1-score, .player-2-score {
+	box-shadow: 0px 10px 0px 0px #000000;
+    background-color: var(--Color-White);
+	border: 3px solid #000000;
+	border-radius: 20px;
+	width: 10%;
+	height: 40%;
+	position: relative;
+	align-self: center;
+	justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
+}
+
+.player-1-score-img, .player-2-score-img {
+	position: absolute;
+	left: 30%;
+	bottom: 85%;
+}
+
+.grid-img {
+
+    width: 100%;
+}
+
+.grid-img-div {
+    width: 50%;
+    height: 77.5vh;
+    position: relative;
+}
+
+.grid-game {
+    width: 96.5%;
+    height: 100%;
+    position: absolute;
+    top: 2.25%;
+    left: 1.85%;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-evenly;
+}
+
+.grid-col {
+    gap: 11.9px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-self: center;
+}
+
+.case {
+    width: 6vw;
+    height: 10vh;
+    border: 3px solid #000000;
+    box-shadow: 0px 5px 0px 3px #000000 inset;
+    border-radius: 50%;
+    align-self: center;
+    background-color: var(--Color-Purple)
+}
