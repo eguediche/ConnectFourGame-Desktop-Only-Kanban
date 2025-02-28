@@ -27,7 +27,7 @@
 	--purple-button-padding: 0.8rem;
 }
 
-h1{
+h1 {
 	font-size: var(--Heading-L-height);
 	line-height: var(--Heading-L-height);
 	font-weight: var(--heading-weight);
@@ -51,16 +51,17 @@ h4 {
 	text-align: center;
 }
 
-p, li {
-    font-size: var(--Heading-XS-height);
+p,
+li {
+	font-size: var(--Heading-XS-height);
 	line-height: var(--Heading-XS-height);
 	font-weight: var(--P-weight);
 	font-family: var(--P-family);
-	text-align: center; 
+	text-align: center;
 }
 
 span {
-    font-weight: var(--heading-weight);
+	font-weight: var(--heading-weight);
 }
 
 h2 {
@@ -72,11 +73,11 @@ h2 {
 }
 
 button {
-    cursor: pointer ;
+	cursor: pointer;
 }
 
 #purple-txt {
-    color: var(--Color-Purple);
+	color: var(--Color-Purple);
 }
 
 body {
@@ -85,7 +86,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--Color-Purple);
-    position: relative;
+	position: relative;
 }
 
 nav {
@@ -94,10 +95,11 @@ nav {
 	justify-content: space-evenly;
 	align-items: center;
 	margin-top: 2%;
-	margin-bottom: 2%;
+	margin-bottom: 5%;
 }
 
-.purple-btn {
+.ingame-menu-btn,
+.ingame-reset-btn {
 	width: 7%;
 	height: 70%;
 	padding: var(--purple-button-padding);
@@ -122,9 +124,10 @@ nav {
 	justify-content: space-evenly;
 }
 
-.player-1-score, .player-2-score {
+.player-1-score,
+.player-2-score {
 	box-shadow: 0px 10px 0px 0px #000000;
-    background-color: var(--Color-White);
+	background-color: var(--Color-White);
 	border: 3px solid #000000;
 	border-radius: 20px;
 	width: 10%;
@@ -136,249 +139,316 @@ nav {
 	flex-direction: column;
 }
 
-.player-1-score-img, .player-2-score-img {
+.player-1-score-img,
+.player-2-score-img {
 	position: absolute;
 	left: 30%;
 	bottom: 85%;
 }
 
 .grid-img {
-    width: 100%;
+	width: 100%;
 }
 
 .grid-img-div {
-    width: 50%;
-    height: 77.5vh;
-    position: relative;
-    background-color: var(--Color-Black);
-    border-radius: 50px;
+	width: 50%;
+	height: 77.5vh;
+	position: relative;
+	background-color: var(--Color-Black);
+	border-radius: 50px;
 }
 
 .grid-game {
-    width: 96.5%;
-    height: 100%;
-    position: absolute;
-    top: 3.5%;
-    left: 1.6%;
-    bottom: 0;
-    right: 0;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr;
-    justify-content: space-evenly;
+	width: 96.5%;
+	height: 100%;
+	position: absolute;
+	top: 3.5%;
+	left: 1.6%;
+	bottom: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 1fr;
+	justify-content: space-evenly;
 }
 
 .grid-col {
-    gap: 26px;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    justify-self: center;
+	gap: 26px;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	justify-self: center;
+	align-items: center;
 }
 
 .case {
-    width: 5.4vw;
-    height: 11vh;
-    border: 3px solid #000000;
-    box-shadow: 0px 5px 0px 3px #000000 inset;
-    border-radius: 50%;
-    align-self: center;
-    background-color: var(--Color-Purple)
+	width: 5.4vw;
+	height: 11vh;
+	border: 3px solid #000000;
+	box-shadow: 0px 5px 0px 3px #000000 inset;
+	border-radius: 50%;
+	align-self: center;
+	background-color: var(--Color-Purple);
 }
 
-.timer-player{
-    border-radius: 90px 90px 20px 20px;
-    background-color: var(--Color-Red);
-    border: 3px solid #000000;
-    box-shadow: 0px 10px 0px 0px #000000;
-    width: 13%;
-    height: 20vh;
-    position: absolute;
-    bottom: -25%;
-    right: 44%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    color: var(--Color-White);
-    gap: 10px;
-    display: none;
+.timer-player {
+	border-radius: 90px 90px 20px 20px;
+	background-color: var(--Color-Red);
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	width: 13%;
+	height: 20vh;
+	position: absolute;
+	bottom: -25%;
+	right: 44%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	color: var(--Color-White);
+	gap: 10px;
+	align-items: center;
 }
 
 .player-2-timer-text {
-    display: none;
+	display: none;
 }
 
 .winner-banner {
-    position: absolute;
-    width: 20%;
-    height: 25vh;
-    bottom: -25%;
-    right: 39.5%;
-    border-radius: 20px;
-    border: 3px solid #000000;
-    box-shadow: 0px 10px 0px 0px #000000;
-    background-color: var(--Color-White);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+	position: absolute;
+	width: 20%;
+	height: 25vh;
+	bottom: -25%;
+	right: 39.5%;
+	border-radius: 20px;
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	background-color: var(--Color-White);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	display: none;
 }
 
 .player-winner-btn {
-    border-radius: 20px;
-    border: none;
-    background-color: var(--Color-Red);
-    color: var(--Color-White);
-    padding: 0.8rem;
-    width: 50%;
-    align-self: center;
+	border-radius: 20px;
+	border: none;
+	background-color: var(--Color-Red);
+	color: var(--Color-White);
+	padding: 0.8rem;
+	width: 50%;
+	align-self: center;
 }
 
 .winner-color-p1 {
-    background-color: var(--Color-Red);
+	background-color: var(--Color-Red);
 }
 
 .winner-color-p2 {
-    background-color: var(--Color-Yellow);
+	background-color: var(--Color-Yellow);
 }
 
 .winner-player-1 {
-    display: block;
+	display: block;
 }
 
 .winner-player-2 {
-    display: none;
+	display: none;
 }
 
-#hidden-header, #hidden-main {
-    display: none;
-}
-
-#hidden {
-    display: none;
+.main-page {
+	display: none;
 }
 
 .rules-div {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--Color-Purple);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--Color-Purple);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
 }
 
 .rules {
-    width: 35%;
-    height: 80%;
-    gap: 30px;
-    background-color: var(--Color-White);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: 3px solid #000000;
-    border-radius: 40px;
-    align-items: start;
+	width: 35%;
+	height: 80%;
+	gap: 30px;
+	background-color: var(--Color-White);
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border: 3px solid #000000;
+	border-radius: 40px;
+	align-items: start;
 }
 
 .rule-close-btn {
-    position: absolute;
-    border: 3px solid #000000;
-    box-shadow: 0px 5px 0px 0px #000000;
-    background-color: var(--Color-Red);
-    border-radius: 100%;
-    width: 15%;
-    height: 13%;
-    bottom: -5%;
-    left: 43%;
+	position: absolute;
+	border: 3px solid #000000;
+	box-shadow: 0px 5px 0px 0px #000000;
+	background-color: var(--Color-Red);
+	border-radius: 100%;
+	width: 15%;
+	height: 13%;
+	bottom: -5%;
+	left: 43%;
 }
 
 .rule-close-btn:hover {
-    border: 3px solid #5C2DD5;
-    box-shadow: 0px 5px 0px 0px #5C2DD5;
+	border: 3px solid #5c2dd5;
+	box-shadow: 0px 5px 0px 0px #5c2dd5;
 }
 
 li {
-    text-align: start;
+	text-align: start;
 }
 
 .span-li {
-    margin-right: 5%;
+	margin-right: 5%;
 }
 
 ol {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-left: 5%;
 }
 
 .rule-txt {
-    margin-left: 5%;
+	margin-left: 5%;
 }
 
 .rule-h {
-    align-self: center;
+	align-self: center;
 }
 
 .rule-p {
-    text-align: start;
-    margin-left: 5%;
+	text-align: start;
+	margin-left: 5%;
 }
 
 .menu-pause-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--Color-Black);
-    z-index: 2;
-    opacity: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	display: none;
 }
 
 .menu-pause {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    width: 30%;
-    height: 55%;
-    background-color: var(--Color-Purple);
-    border-radius: 40px;
-    border: 3px solid #000000;
-    box-shadow: 0px 10px 0px 0px #000000;
-    align-items: center;
-    gap: 35px;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	width: 30%;
+	height: 55%;
+	background-color: var(--Color-Purple);
+	border-radius: 40px;
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	align-items: center;
+	gap: 35px;
 }
 
 #white-txt {
-    color: var(--Color-White);
-    margin-top: 5%;
+	color: var(--Color-White);
+	margin-top: 5%;
 }
 
-.menu-pause-btn {
-    border: 3px solid #000000;
-    box-shadow: 0px 10px 0px 0px #000000;
-    border-radius: 20px;
-    width: 80%;
-    height: 15%;
-    background-color: var(--Color-White);
+.menu-continue-btn,
+.menu-restart-btn,
+.menu-quit-btn {
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	border-radius: 20px;
+	width: 80%;
+	height: 15%;
+	background-color: var(--Color-White);
 }
 
-.menu-pause-btn:hover {
-    border: 3px solid #5C2DD5;
-    box-shadow: 0px 10px 0px 0px #5C2DD5;
+.plr-plr-btn:hover,
+.game-rule-btn:hover,
+.menu-continue-btn:hover,
+.menu-restart-btn:hover,
+.menu-quit-btn:hover {
+	border: 3px solid #5c2dd5;
+	box-shadow: 0px 10px 0px 0px #5c2dd5;
 }
 
 #red-btn {
-    background-color: var(--Color-Red);
-    color: var(--Color-White);
+	background-color: var(--Color-Red);
+	color: var(--Color-White);
+}
+
+.menu-starter-div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--Color-DarkPurple);
+}
+
+.menu-starter {
+	width: 35%;
+	height: 65%;
+	border-radius: 40px;
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	background-color: var(--Color-Purple);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 65px;
+}
+
+.plr-plr-btn,
+.game-rule-btn {
+	border: 3px solid #000000;
+	box-shadow: 0px 10px 0px 0px #000000;
+	border-radius: 20px;
+	width: 80%;
+	height: 15%;
+	padding: 1rem;
+	background-color: var(--Color-White);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.plr-plr-btn {
+	background-color: var(--Color-Yellow);
+}
+
+
+.div-bas {
+	position: absolute;
+	bottom: -30%;
+	right: 0;
+	left: 0;
+	background-color: var(--Color-DarkPurple);
+	height: 20%;
+	border-radius: 20px 20px 0px 0px;
+}
+
+#img-col {
+	position: absolute;
+	top: -10%;
 }

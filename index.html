@@ -9,7 +9,14 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		<div class="rules-div" id="hidden">
+        <div class="menu-starter-div">
+            <div class="menu-starter">
+                <img src="./assets/svg-logo-quatre-rond.svg" alt="svg-logo-quatre-rond">
+                <button class="plr-plr-btn"><h2>PLAYER VS PLAYER</h2> <img src="./assets/player-vs-player.svg" alt="player-vs-player-img"></button>
+                <button class="game-rule-btn"><h2>GAME RULES</h2></button>
+            </div>
+        </div>
+		<div class="rules-div">
 			<div class="rules">
                 <button class="rule-close-btn" aria-label="Valider button" tabindex="1">
                     <img src="./assets/valider-svg-icon.svg" alt="valier-icon">
@@ -28,20 +35,22 @@
         </div>
         <div class="menu-pause-div">
             <div class="menu-pause">
-                <h1 id="white-txt">PAUSE</h1>
-                <button class="menu-pause-btn"><h2>CONTINUE GAME</h2></button>
-                <button class="menu-pause-btn"><h2>RESTART</h2></button>
-                <button class="menu-pause-btn" id="red-btn"><h2>QUIT GAME</h2></button>
+                <h1 id="white-txt" aria-label="Pause" tabindex="4">PAUSE</h1>
+                <button class="menu-continue-btn" aria-label="continue game ?" tabindex="3"><h2>CONTINUE GAME</h2></button>
+                <button class="menu-restart-btn" aria-label="restart ?" tabindex="2"><h2>RESTART</h2></button>
+                <button class="menu-quit-btn" id="red-btn" aria-label="quit game ?" tabindex="1"><h2>QUIT GAME</h2></button>
             </div>
         </div>
+        <section class="main-page">
+			<div class="div-bas"></div>
 		<header>
 			<nav>
-				<button class="purple-btn" tabindex="2"><h4>MENU</h4></button>
-				<img src="./assets/svg-logo-quatre-rond.svg" alt="quatre-rond-icon" />
-				<button class="purple-btn" tabindex="2"><h4>RESTART</h4></button>
+				<button class="ingame-menu-btn" tabindex="2"><h4>MENU</h4></button>
+				<img  src="./assets/svg-logo-quatre-rond.svg" alt="quatre-rond-icon" />
+				<button class="ingame-reset-btn" tabindex="2"><h4>RESTART</h4></button>
 			</nav>
 		</header>
-		<main>
+		<main >
 			<section class="player-score-section">
 				<div class="player-1-score">
 					<img
@@ -50,7 +59,7 @@
 						alt="player-one-icon"
 					/>
 					<h3 tabindex="1">PLAYER 1</h3>
-					<h1 role="log" aria-live="polite" tabindex="1">
+					<h1 class="j1-score" role="log" aria-live="polite" tabindex="1">
 						12
 					</h1>
 				</div>
@@ -58,12 +67,15 @@
 					<img class="grid-img" src="./assets/grille-svg.svg" alt="grid-icon" />
 					<div class="grid-game">
 						<div
+						id="grid-col-1"
 							class="grid-col"
 							aria-label="première colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+							<img class="pointer-col1-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+							<img class="pointer-col1-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -72,12 +84,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-2"
 							class="grid-col"
 							aria-label="deuxième colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col2-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col2-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -86,12 +101,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-3"
 							class="grid-col"
 							aria-label="troisème colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col3-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col3-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -100,12 +118,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-4"
 							class="grid-col"
 							aria-label="quatrième colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col4-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col4-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -114,12 +135,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-5"
 							class="grid-col"
 							aria-label="cinquième colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col5-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col5-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -128,12 +152,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-6"
 							class="grid-col"
 							aria-label="sixième colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col6-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col6-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -142,12 +169,15 @@
 							<button class="case" tabindex="-1"></button>
 						</div>
 						<div
+						id="grid-col-7"
 							class="grid-col"
 							aria-label="septième colonne"
 							aria-live="polite"
 							role="log"
 							tabindex="0"
 						>
+						<img class="pointer-col7-red" id="img-col" src="./assets/Rectangle (1).svg" alt="fleche-rouge">
+						<img class="pointer-col7-yellow" id="img-col"  src="./assets/Rectangle (2).svg" alt="fleche-jaune">
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
 							<button class="case" tabindex="-1"></button>
@@ -164,7 +194,7 @@
 						alt="player-two-icon"
 					/>
 					<h3 tabindex="1">PLAYER 2</h3>
-					<h1 role="log" aria-live="polite" tabindex="1">
+					<h1 class="j2-score"  role="log" aria-live="polite" tabindex="1">
 						23
 					</h1>
 				</div>
@@ -185,7 +215,6 @@
 					Player 2'S turn
 				</h4>
 				<h1
-					class="heading-l"
 					class="player-timer-time"
 					aria-label="timer time"
 					tabindex="1"
@@ -217,6 +246,7 @@
                 <h4>PLAY AGAIN</h4>
 				</button>
 		</main>
+    </section>
 		<script src="app.js"></script>
 	</body>
 </html>
